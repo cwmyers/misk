@@ -60,7 +60,8 @@ data class DataSourceConfig(
   // going forward
   val trust_certificate_key_store_path: String? = null,
   val client_certificate_key_store_path: String? = null,
-  val show_sql: String? = "false"
+  val show_sql: String? = "false",
+  val jdbc_statement_batch_size: Int = 20
 ) {
   fun withDefaults(): DataSourceConfig {
     return when (type) {

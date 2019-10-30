@@ -89,6 +89,7 @@ internal class SessionFactoryService(
       applySetting(AvailableSettings.USE_GET_GENERATED_KEYS, "true")
       applySetting(AvailableSettings.USE_NEW_ID_GENERATOR_MAPPINGS, "false")
       applySetting(AvailableSettings.JDBC_TIME_ZONE, "UTC")
+      applySetting(AvailableSettings.STATEMENT_BATCH_SIZE, config.jdbc_statement_batch_size)
     }
 
     val registry = registryBuilder.build()
